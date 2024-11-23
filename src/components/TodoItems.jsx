@@ -1,11 +1,10 @@
 import { TodoItemsContext } from "../store/todo-items-store";
 import { useContext } from "react";
 import TodoItem from "./TodoItem";
-import styles from "./TodoItems.module.css";
 const TodoItems = () => {
   const { todoItems } = useContext(TodoItemsContext);
   return (
-    <div className={styles.itemContainer}>
+    <div className="container">
       {todoItems.map((items) => (
         <TodoItem
           key={`${items.name}-${items.date}`}
